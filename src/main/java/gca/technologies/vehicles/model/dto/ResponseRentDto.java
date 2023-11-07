@@ -2,11 +2,11 @@ package gca.technologies.vehicles.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import gca.technologies.vehicles.model.entity.GCAStatusEntity;
-import gca.technologies.vehicles.model.entity.GCAUserPaymentEntity;
-import jakarta.persistence.*;
 import lombok.*;
 
+/**
+ * Clase encargada de mappear el response para la tabla GCA_RENT
+ */
 @Getter
 @Setter
 @Builder

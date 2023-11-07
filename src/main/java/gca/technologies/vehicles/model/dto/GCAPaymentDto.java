@@ -5,6 +5,9 @@ import lombok.*;
 
 import javax.validation.constraints.Pattern;
 
+/**
+ * Clase encargada de mappear el request para la tabla GCA_USER_PAYMENT
+ */
 @Getter
 @Setter
 @Builder

@@ -9,7 +9,6 @@ import gca.technologies.vehicles.repository.PaymentsRepository;
 import gca.technologies.vehicles.repository.RentRepository;
 import gca.technologies.vehicles.repository.StatusRepository;
 import gca.technologies.vehicles.repository.UsersPaymentsRepository;
-import gca.technologies.vehicles.services.users.UsersService;
 import gca.technologies.vehicles.util.BussinesException;
 import gca.technologies.vehicles.util.Constants;
 import gca.technologies.vehicles.util.GenericServices;
@@ -26,6 +25,7 @@ import java.util.Objects;
 @RequiredArgsConstructor
 public class VehiclesServiceImpl implements VehiclesService {
 
+
     private final RentRepository rentRepository;
 
     private final StatusRepository statusRepository;
@@ -33,8 +33,6 @@ public class VehiclesServiceImpl implements VehiclesService {
     private final UsersPaymentsRepository usersPaymentsRepository;
 
     private final PaymentsRepository paymentsRepository;
-
-    private final UsersService usersService;
 
     private ResponseUserPaymentDto buildUserPayments(GCAUsersEntity user, GCAPaymentsEntity payment) {
 
@@ -80,7 +78,7 @@ public class VehiclesServiceImpl implements VehiclesService {
                     .status(gcaRentEntity.getStatus().getStatusType())
                     .build();
             return GenericServices.buildResponse(Constants.OK.getResponseCode(), Constants.OK.getMessage(), responseRentDto);
-        } catch (BussinesException e){
+        } catch (BussinesException e) {
             return GenericServices.buildResponse(e.getErrorCode(), e.getMessage(), null);
         }
 
@@ -102,7 +100,7 @@ public class VehiclesServiceImpl implements VehiclesService {
         GCARentEntity rentEntity = rentRepository.findById(request.getRegisterId()).orElseThrow(() -> new BussinesException(Constants.ERROR_NOT_FOUND.getMessage(), Constants.ERROR_NOT_FOUND.getResponseCode(), this.getClass().getCanonicalName()));
         GCAStatusEntity status = statusRepository.findById(request.getStatusId()).orElseThrow(() -> new BussinesException(Constants.ERROR_NOT_FOUND.getMessage(), Constants.ERROR_NOT_FOUND.getResponseCode(), this.getClass().getCanonicalName()));
         rentEntity.setStatus(status);
-        if (Objects.equals(rentEntity.getStatus().getStatusCode(), 2)){
+        if (Objects.equals(rentEntity.getStatus().getStatusCode(), 2)) {
             rentEntity.setRentEndDate(GenericServices.recoverFormattedDate());
         }
         rentRepository.save(rentEntity);
