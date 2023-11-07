@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
 import lombok.*;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 @Getter
@@ -18,6 +19,7 @@ public class GCAUsersDto {
      */
     @JsonProperty("usuario")
     @Pattern(regexp = "^[a-zA-Z0-9]+$", message = "El nombre de usuario solo puede contener letras y numeros")
+    @NotNull(message = "El nombre de usuario no puede ser nulo")
     private String userName;
 
     /**
@@ -25,6 +27,7 @@ public class GCAUsersDto {
      */
     @JsonProperty("nombres")
     @Pattern(regexp = "^[a-zA-Z ]*$", message = "El nombre solo puede contener letras")
+    @NotNull(message = "El nombre no puede ser nulo")
     private String name;
 
     /**
@@ -32,12 +35,14 @@ public class GCAUsersDto {
      */
     @JsonProperty("apellidos")
     @Pattern(regexp = "^[a-zA-Z ]*$", message = "El apellido solo puede contener letras")
+    @NotNull(message = "El apellido no puede ser nulo")
     private String lastName;
 
     /**
      * Hace referencia a la contraseña
      */
     @JsonProperty("contrasena")
+    @NotNull(message = "La contraseña no puede ser nula")
     private String password;
 
 }

@@ -3,6 +3,9 @@ package gca.technologies.vehicles.util;
 import gca.technologies.vehicles.model.Response;
 import lombok.extern.slf4j.Slf4j;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 /**
  * Clase que contiene metodos genericos para los servicios
  */
@@ -22,6 +25,13 @@ public class GenericServices {
                 .responseMessage(message)
                 .data(data)
                 .build();
+    }
+
+    public static String recoverFormattedDate(){
+        LocalDateTime registerDate = LocalDateTime.now();
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        String date = registerDate.format(formato);
+        return date;
     }
 
 }

@@ -10,10 +10,14 @@ public interface UsersService {
 
     Response getUserById(Integer registerId);
 
-    Response addUser(GCAUsersDto user);
+    Response addUser(GCAUsersDto request);
 
     Response deleteUserById(Integer registerId);
 
-    Response addPaymentMethod(GCAUserPaymentDto userPayment);
+    Response addPaymentMethod(GCAUserPaymentDto request);
+
+    Response updateUserPaymentMethod(GCAUserPaymentDto request);
+
+    Response deleteUserPaymentMethod(GCAUserPaymentDto userPayment);
 
 }

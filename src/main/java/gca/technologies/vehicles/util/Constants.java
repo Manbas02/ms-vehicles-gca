@@ -4,6 +4,8 @@ public enum Constants {
 
     OK(0, "La operación se ha realizado correctamente"),
 
+    OK_NO_DATA(1, "La operación se ha realizado correctamente pero no se han encontrado datos"),
+
     ERROR(-1, "Se ha producido un error"),
 
     ERROR_NOT_FOUND(-2, "No se ha encontrado el elemento solicitado"),
