@@ -1,0 +1,717 @@
+{
+	"info": {
+		"_postman_id": "03e8b238-80a8-474d-b00f-6398f0f625b0",
+		"name": "GCATechnologies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28275944"
+	},
+	"item": [
+		{
+			"name": "Dev",
+			"item": [
+				{
+					"name": "Usuarios",
+					"item": [
+						{
+							"name": "Listar Usuarios",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "vehicles-gca.us-east-1.elasticbeanstalk.com/gca-technologies/usuarios/listar",
+									"host": [
+										"vehicles-gca",
+										"us-east-1",
+										"elasticbeanstalk",
+										"com"
+									],
+									"path": [
+										"gca-technologies",
+										"usuarios",
+										"listar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recuperar Usuario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "vehicles-gca.us-east-1.elasticbeanstalk.com/gca-technologies/usuarios/recuperar?idRegistroUsuario=2",
+									"host": [
+										"vehicles-gca",
+										"us-east-1",
+										"elasticbeanstalk",
+										"com"
+									],
+									"path": [
+										"gca-technologies",
+										"usuarios",
+										"recuperar"
+									],
+									"query": [
+										{
+											"key": "idRegistroUsuario",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Agregar Usuario",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\": \"maria.silva\",\r\n    \"nombres\": \"Maria Yineth\",\r\n    \"apellidos\": \"Silva Ceron\",\r\n    \"contrasena\": \"Yina123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "vehicles-gca.us-east-1.elasticbeanstalk.com/gca-technologies/usuarios/registrar",
+									"host": [
+										"vehicles-gca",
+										"us-east-1",
+										"elasticbeanstalk",
+										"com"
+									],
+									"path": [
+										"gca-technologies",
+										"usuarios",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar Usuario",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\": \"hector.bautista\",\r\n    \"nombres\": \"Hector\",\r\n    \"apellidos\": \"Bautista Cardenas\",\r\n    \"contrasena\": \"Hector123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "vehicles-gca.us-east-1.elasticbeanstalk.com/gca-technologies/usuarios/eliminar?idRegistroUsuario=29",
+									"host": [
+										"vehicles-gca",
+										"us-east-1",
+										"elasticbeanstalk",
+										"com"
+									],
+									"path": [
+										"gca-technologies",
+										"usuarios",
+										"eliminar"
+									],
+									"query": [
+										{
+											"key": "idRegistroUsuario",
+											"value": "29"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Agregar Medio Pago",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\": 25,\r\n    \"medioPago\": {\r\n        \"tipoMedioPago\": \"CREDITO\",\r\n        \"numeroTarjeta\": \"4566123405831264\",\r\n        \"cvv\": \"743\",\r\n        \"fechaExpiracion\": \"12/23\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "vehicles-gca.us-east-1.elasticbeanstalk.com/gca-technologies/usuarios/agregarMedioDePago",
+									"host": [
+										"vehicles-gca",
+										"us-east-1",
+										"elasticbeanstalk",
+										"com"
+									],
+									"path": [
+										"gca-technologies",
+										"usuarios",
+										"agregarMedioDePago"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Editar Medio de Pago Usuario",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\": 25,\r\n    \"medioPago\": {\r\n        \"idRegistro\": 37,\r\n        \"tipoMedioPago\": \"DEBITO\",\r\n        \"numeroTarjeta\": \"3234567890121156\",\r\n        \"cvv\": \"777\",\r\n        \"fechaExpiracion\": \"09/30\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "vehicles-gca.us-east-1.elasticbeanstalk.com/gca-technologies/usuarios/editarMedioPago",
+									"host": [
+										"vehicles-gca",
+										"us-east-1",
+										"elasticbeanstalk",
+										"com"
+									],
+									"path": [
+										"gca-technologies",
+										"usuarios",
+										"editarMedioPago"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar Medio de Pago Usuario",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\": 25,\r\n    \"medioPago\": {\r\n        \"idRegistro\": 37\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "vehicles-gca.us-east-1.elasticbeanstalk.com/gca-technologies/usuarios/eliminarMedioPago",
+									"host": [
+										"vehicles-gca",
+										"us-east-1",
+										"elasticbeanstalk",
+										"com"
+									],
+									"path": [
+										"gca-technologies",
+										"usuarios",
+										"eliminarMedioPago"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Rentas",
+					"item": [
+						{
+							"name": "Rentar Vehiculo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"valor\" : 300000,\r\n    \"vehiculo\" : \"Mazda CX30\",\r\n    \"medioDePago\": 36\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "vehicles-gca.us-east-1.elasticbeanstalk.com/gca-technologies/rentaVehiculos/rentar",
+									"host": [
+										"vehicles-gca",
+										"us-east-1",
+										"elasticbeanstalk",
+										"com"
+									],
+									"path": [
+										"gca-technologies",
+										"rentaVehiculos",
+										"rentar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Rentas",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"valor\" : 300000,\r\n    \"vehiculo\" : \"Mazda CX30\",\r\n    \"medioDePago\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "vehicles-gca.us-east-1.elasticbeanstalk.com/gca-technologies/rentaVehiculos/listar",
+									"host": [
+										"vehicles-gca",
+										"us-east-1",
+										"elasticbeanstalk",
+										"com"
+									],
+									"path": [
+										"gca-technologies",
+										"rentaVehiculos",
+										"listar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recuperar Renta",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"valor\" : 300000,\r\n    \"vehiculo\" : \"Mazda CX30\",\r\n    \"medioDePago\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "vehicles-gca.us-east-1.elasticbeanstalk.com/gca-technologies/rentaVehiculos/recuperar?idRegistro=23",
+									"host": [
+										"vehicles-gca",
+										"us-east-1",
+										"elasticbeanstalk",
+										"com"
+									],
+									"path": [
+										"gca-technologies",
+										"rentaVehiculos",
+										"recuperar"
+									],
+									"query": [
+										{
+											"key": "idRegistro",
+											"value": "23"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar Estado Renta",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idRegistro\": 28,\r\n    \"idEstado\":3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "vehicles-gca.us-east-1.elasticbeanstalk.com/gca-technologies/rentaVehiculos/actualizarEstado",
+									"host": [
+										"vehicles-gca",
+										"us-east-1",
+										"elasticbeanstalk",
+										"com"
+									],
+									"path": [
+										"gca-technologies",
+										"rentaVehiculos",
+										"actualizarEstado"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "Usuarios",
+					"item": [
+						{
+							"name": "Listar Usuarios",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/gca-technologies/usuarios/listar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gca-technologies",
+										"usuarios",
+										"listar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recuperar Usuario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/gca-technologies/usuarios/recuperar?idRegistroUsuario=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gca-technologies",
+										"usuarios",
+										"recuperar"
+									],
+									"query": [
+										{
+											"key": "idRegistroUsuario",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Agregar Usuario",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\": \"maria.silva\",\r\n    \"nombres\": \"Maria Yineth\",\r\n    \"apellidos\": \"Silva Ceron\",\r\n    \"contrasena\": \"Yina123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/gca-technologies/usuarios/registrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gca-technologies",
+										"usuarios",
+										"registrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar Usuario",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\": \"hector.bautista\",\r\n    \"nombres\": \"Hector\",\r\n    \"apellidos\": \"Bautista Cardenas\",\r\n    \"contrasena\": \"Hector123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/gca-technologies/usuarios/eliminar?idRegistroUsuario=27",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gca-technologies",
+										"usuarios",
+										"eliminar"
+									],
+									"query": [
+										{
+											"key": "idRegistroUsuario",
+											"value": "27"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Agregar Medio Pago",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\": 25,\r\n    \"medioPago\": {\r\n        \"tipoMedioPago\": \"CREDITO\",\r\n        \"numeroTarjeta\": \"4566123405831264\",\r\n        \"cvv\": \"743\",\r\n        \"fechaExpiracion\": \"12/23\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/gca-technologies/usuarios/agregarMedioDePago",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gca-technologies",
+										"usuarios",
+										"agregarMedioDePago"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Editar Medio de Pago Usuario",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\": 25,\r\n    \"medioPago\": {\r\n        \"idRegistro\": 36,\r\n        \"tipoMedioPago\": \"DEBITO\",\r\n        \"numeroTarjeta\": \"3234567890121156\",\r\n        \"cvv\": \"777\",\r\n        \"fechaExpiracion\": \"09/30\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/gca-technologies/usuarios/editarMedioPago",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gca-technologies",
+										"usuarios",
+										"editarMedioPago"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar Medio de Pago Usuario",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\": 21,\r\n    \"medioPago\": {\r\n        \"idRegistro\": 29\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/gca-technologies/usuarios/eliminarMedioPago",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gca-technologies",
+										"usuarios",
+										"eliminarMedioPago"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Rentas",
+					"item": [
+						{
+							"name": "Rentar Vehiculo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"valor\" : 300000,\r\n    \"vehiculo\" : \"Mazda CX30\",\r\n    \"medioDePago\": 36\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/gca-technologies/rentaVehiculos/rentar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gca-technologies",
+										"rentaVehiculos",
+										"rentar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar Rentas",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"valor\" : 300000,\r\n    \"vehiculo\" : \"Mazda CX30\",\r\n    \"medioDePago\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/gca-technologies/rentaVehiculos/listar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gca-technologies",
+										"rentaVehiculos",
+										"listar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recuperar Renta",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"valor\" : 300000,\r\n    \"vehiculo\" : \"Mazda CX30\",\r\n    \"medioDePago\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/gca-technologies/rentaVehiculos/recuperar?idRegistro=23",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gca-technologies",
+										"rentaVehiculos",
+										"recuperar"
+									],
+									"query": [
+										{
+											"key": "idRegistro",
+											"value": "23"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar Estado Renta",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idRegistro\": 28,\r\n    \"idEstado\":3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/gca-technologies/rentaVehiculos/actualizarEstado",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"gca-technologies",
+										"rentaVehiculos",
+										"actualizarEstado"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

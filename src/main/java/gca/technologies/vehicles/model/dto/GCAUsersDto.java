@@ -1,12 +1,14 @@
 package gca.technologies.vehicles.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.Column;
 import lombok.*;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
+/**
+ * Clase encargada de mappear el request para la tabla GCA_USERS
+ */
 @Getter
 @Setter
 @Builder

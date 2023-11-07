@@ -13,12 +13,21 @@ import lombok.*;
 @AllArgsConstructor
 public class Response {
 
+    /**
+     * Código de respuesta
+     */
     @JsonProperty("codigo")
     private Integer responseCode;
 
+    /**
+     * Mensaje de respuesta
+     */
     @JsonProperty("mensaje")
     private String responseMessage;
 
+    /**
+     * Datos de respuesta
+     */
     @JsonProperty("data")
     private Object data;
 

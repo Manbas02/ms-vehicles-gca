@@ -3,6 +3,9 @@ package gca.technologies.vehicles.model.dto;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
+/**
+ * Clase encargada de mappear el request para la tabla GCA_RENT
+ */
 @Getter
 @Setter
 @Builder

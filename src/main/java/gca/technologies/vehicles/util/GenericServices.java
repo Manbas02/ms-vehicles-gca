@@ -27,6 +27,10 @@ public class GenericServices {
                 .build();
     }
 
+    /**
+     * Método encargado de recuperar la fecha actual en formato dd/MM/yyyy HH:mm:ss
+     * @return devuelve la fecha actual en cadena de texto
+     */
     public static String recoverFormattedDate(){
         LocalDateTime registerDate = LocalDateTime.now();
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
