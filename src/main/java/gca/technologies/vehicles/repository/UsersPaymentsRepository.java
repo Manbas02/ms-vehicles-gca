@@ -15,4 +15,6 @@ public interface UsersPaymentsRepository extends JpaRepository<GCAUserPaymentEnt
 
     GCAUserPaymentEntity findByUserAndPaymentType(GCAUsersEntity user, GCAPaymentsEntity paymentType);
 
+    GCAUserPaymentEntity findByPaymentType(GCAPaymentsEntity paymentType);
+
 }

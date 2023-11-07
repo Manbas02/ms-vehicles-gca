@@ -1,5 +1,6 @@
 package gca.technologies.vehicles.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
@@ -37,6 +38,7 @@ public class GCAPaymentsEntity {
      */
     @Column(name = "CARD_NUMBER")
     @JsonProperty("numeroTarjeta")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String cardNumber;
 
     /**
@@ -44,6 +46,7 @@ public class GCAPaymentsEntity {
      */
     @Column(name = "CVV")
     @JsonProperty("cvv")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String cvv;
 
     /**
@@ -51,5 +54,6 @@ public class GCAPaymentsEntity {
      */
     @Column(name = "EXPIRATION_DATE")
     @JsonProperty("fechaExpiracion")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String expirationDate;
 }
